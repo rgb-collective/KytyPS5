@@ -15,6 +15,8 @@ project(Kyty)
 find_program(SCCACHE_PROGRAM sccache)
 find_program(CCACHE_PROGRAM ccache)
 
+set(SDL_X11_XTEST OFF CACHE BOOL "" FORCE)
+
 foreach(lang IN ITEMS C CXX)
     # An explicitly empty launcher disables caching for this language.
     if(NOT DEFINED CMAKE_${lang}_COMPILER_LAUNCHER)
